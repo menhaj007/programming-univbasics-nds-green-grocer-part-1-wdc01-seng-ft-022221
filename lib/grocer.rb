@@ -58,22 +58,22 @@ unconsolidated_cart = [
     half_cosolidated_cart
   end
 
-  def consolidate_cart(unconsolidated_cart)
-    consolidated_cart = Array.new
-    index = 0
-    while index < unconsolidated_cart.length do
-        current_item = unconsolidated_cart[index]
-        # puts current_item[:item]
-        if (find_item_by_name_in_collection(current_item[:item], consolidated_cart) == nil)
-          current_item[:count] = 1
-          consolidated_cart.push(current_item)
-        else 
-          update_counts(current_item[:item], consolidated_cart)
-        end
-        index += 1
-    end
-    consolidated_cart
-  end
-  puts consolidate_cart(unconsolidated_cart)
+  # def consolidate_cart(unconsolidated_cart)
+  #   consolidated_cart = Array.new
+  #   index = 0
+  #   while index < unconsolidated_cart.length do
+  #       current_item = unconsolidated_cart[index]
+  #       # puts current_item[:item]
+  #       if (find_item_by_name_in_collection(current_item[:item], consolidated_cart) == nil)
+  #         current_item[:count] = 1
+  #         consolidated_cart.push(current_item)
+  #       else 
+  #         update_counts(current_item[:item], consolidated_cart)
+  #       end
+  #       index += 1
+  #   end
+  #   consolidated_cart
+  # end
+  # puts consolidate_cart(unconsolidated_cart)
 
   
