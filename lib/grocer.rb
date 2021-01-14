@@ -77,5 +77,21 @@ unconsolidated_cart = [
   # puts consolidate_cart(unconsolidated_cart)
   
   
+def consolidate_cart(cart)
+  result = []
+  index = 0
+  while index < cart.length do
+    item = cart[index]
+    if find_item_by_name_in_collection(item[:item], result) == nil
+      item[:count] = 1
+      result << item
+    else
+      item[:count] += 1
+    end
+    index += 1
+  end
+  result
+  #binding.pry
+end
 
   
